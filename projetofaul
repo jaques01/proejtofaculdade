@@ -1,0 +1,352 @@
+<?php
+
+
+$paginas = ['Games Story'=> 'BEM VINDO A MELHOR PAGINA DE NOTICIAS SOBRE JOGOS E E-SPORTS',];
+
+
+
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Projeto Facul</title>
+<style type="text/css">
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+ 
+
+
+}
+
+
+header{
+background-color:#069 ;
+padding: 8px 10px;
+text-align: center
+
+}
+
+a{
+
+display: inline-block;
+margin: 0 10px;
+color: white;
+font-size: 17px;
+
+}
+
+section{
+max-width: 960px;
+margin:20px auto;
+padding: 0 2%;
+
+
+}
+
+
+h2{
+background-color:#069 ;
+color: white;
+padding: 8px 10px;
+ text-align: center
+ 
+}
+
+p{
+color: black;
+margin-top: 10px;
+font-size: 16px;
+text-align: center
+	
+
+
+}
+
+ul li{
+	list-style: none;
+	display: inline;
+	background-color:#069 ;
+	color: white;
+	padding: 8px 10px;
+ 	text-align: center;
+ 	margin: 0;
+	}
+
+ul{
+	margin:0;
+	padding:0 ;
+	text-align: center
+}
+
+#destaques {
+	width: 100%;
+	height: 700px;
+	
+}
+#destaque1{
+	width: 45%;
+	height: 341px;
+	float: left;
+	margin-top: 20px;
+	margin: center;
+
+}
+
+#destaque1 img{
+	width: 90%;
+	height: 400px;
+	margin-top: 20px;
+	margin-left: 50px;
+	
+}
+
+#destaque2{
+	width: 45%;
+	height: 10px;
+	float: right;
+	margin-top: 15px;
+	margin: center;
+
+}
+
+
+
+#destaque2 img{
+	width: 90%;
+	height: 400px;
+	margin-right: 5px;
+	margin-top: 20px;
+	
+}
+
+#centro{
+	width: 100%;
+	height: 500px;
+	margin-top: -200px;
+}
+#fotos{
+	width: 69%;
+	float: left;
+	height: 200px;
+	margin-top: 0px;
+}
+#jogos-do-momento{
+	width: 30%;
+	float: right;
+	height: 30px;
+	margin-top: 0px;
+}
+#foto1{
+	width: 30%;
+}
+#foto2{
+	width: 30%;
+	margin-left: 4%;
+	height: 420px;
+}
+#foto3{
+	width: 30%;
+	float: right;
+}
+#O-auge-dos-e-sports{
+	width: 30%;
+	float: right;
+
+}
+#O-auge-dos-e-sports ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	padding: 3px;
+	text-align: revert;
+
+}
+#O-auge-dos-e-sports ul li{
+	
+	border-bottom: solid 10px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	padding: 3px;
+	
+}
+#MVPS-DO-MES{
+	width: 100%;
+	height: 120px;
+
+}
+
+#MVPS1{
+	width: 50%;
+	float: left;
+	height: 120px;
+
+}
+
+#MVPS1 img{
+	width: 350px;
+	height: 300px;
+	float: left;
+	margin-right: 15px;
+}
+
+#MVPS2{
+	width: 50%;
+	float: left;
+	height: 120px;
+}
+#MVPS2 img{
+	width: 350x;
+	height: 300px;
+	float: left;
+	margin-right: 15px;
+}
+.titulo-noticia{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+</style>
+</head>
+<body>
+<header>
+<?php
+foreach ($paginas as $key => $value) {
+echo '<a href="?page='.$key.'">'. ucfirst($key).'</a>';
+}
+
+?>
+</header>
+<section>
+<h2><?php
+
+$pagina = (isset($_GET['page']) ? $_GET['page'] : 'Games');
+
+if(!array_key_exists($pagina,$paginas)){
+$pagina = 'Games Story';
+
+}
+
+
+
+echo ucfirst($pagina);
+
+?></h2>
+<p>	<?php echo $paginas[$pagina]; ?> </p>
+</section>
+<div id="menu">
+	<ul>
+		<li>JOGOS DO MOMENTOS</li>
+		<li>MELHORES JOGOS DE GRAÇA</li>
+		<li>MELHORES JOGOS DOS STREAMS</li>
+		<li>JOGOS DA GALERA</li>
+	
+
+		</ul>
+</div>
+
+<div id="destaques">
+	<div id="destaque1"> <img src="img/major_css.png"> </div>
+	<div id="destaque2"> <img src="img/champion_vava.png"> 
+	</div>
+		<div id="destaA"> </div>
+		</div>
+
+		<div id="centro">
+			<div id="fotos">
+				<h2>Fotos dos Campeonatos</h2>
+				<hr> 
+				<img id="foto1" src="img/sacy_vava.png">
+				<img id="foto2"  src="img/camp_css.png">
+				<img id="foto3"  src="img/taça_vava.png">
+			</div>
+
+			<div id="O-auge-dos-e-sports"> 
+				<h2>O Ano do Brasil</h2>
+				<hr>
+				<ul>
+					<li> A gloria do Brasil no CS e Valorant fez com que o país tivesse um dos seus melhores anos no E-sport, Os campentaos disputados fez com que o Brasil ganhasse destaque por onde fosse. </li>
+					<li> Ao todo o país ganhou quase todas as competicções internacionais no qual dispotou, tendo um grande destaque no Valorant e no CS onde foram bons destaques no país. </li>
+					<li> O time de LOL chegou sem muitos destaques mas a cada ano que passa, mostra que talvez possa sonhar com algo maior em campeonatos internacionais. </li>
+					<li>Mas tem muito no qual reclamar, algumas ORGS Brasileiras ficaram chateadas com algumas organizações, a mais decepcionate foi a ESL (organizadora do major de CS) a mesma diversas vezes quis acabar com o espetaculo no qual estava promovendo, sem contar no desastre relacionado aos ingressos que estavam absurdos de car. </li>
+					<li> Mas uma coisa tem a de se orgulhar muito, a torcida no Brasil fez seu show, bateiras, pandeiros e etc fez com que o nivel de torcida fosse elevado, o Brasil, literalmente é o país do FPS!</li>
+					
+				</ul>	
+			</div>
+		</div>
+			
+			<div id="MVPS-DO-MES">
+				<h2> JOGADORES DO MES</h2>
+				<hr>
+				<div id="MVPS1">
+					<img src="img/aspas_vava.png">
+					<div id= "titulo-noticia"> Erick " aspas " Santos</div>
+					Um dos melhores jogadores de Valorant do mundo, Aspas foi o maior destaque do mundial de valorant, ganhando o premio de MVP do torneio o mesmo além de ganhar o maior titulo de sua carreira, com toda certeza entrou para o "Hall da fama" do jogo como o melhor brasileiro do Game, atualmente com as competições de Valorant em pausa por conta de férias o jogador faz Lives na Twitch para monstrar suas habilidades e treinos.
+					
+				</div>
+
+				<div id="MVPS2">
+					
+				<img src="img/ks_css.png">
+					<div id= "titulo-noticia">Kaike " KSCERATO " Cerato </div>
+					UM dos  melhores "riflers" da atualidade KSCERATO mostra que mira e tranquilidade pode fazer um player ser de altissima qualidade, no major do Brasil, Kscerato teve um dos melhores rating entre todos os jogadores do Major, o titulo não veio infelizmente, mas a performace fez com que ele tivesse nosso destaque!
+
+
+
+
+				</div>
+
+			</div> 
+
+</body>
+</html>
+
+<?php 
+
+include "test_cadastro.php";
+
+if(isset($_POST['uname']) && isset($_POST['password'])) {
+
+	function validate($data){
+		$data = trim($data);
+		$data = stripslashes($data);
+		$data = htmlspecialchars($data); 
+		return $data;
+	}
+
+	$uname = validate($_POST['uname']);
+	$pass = validate($_POST['password']);
+
+	if (empty($uname)) {
+		header("Location: index.php?error=User Name is required");
+	    exit(); 
+	}else if(empty($pass)){
+		header("Location: index.php?error=Password is required");
+	    exit(); 
+	}else{
+		$sql = "SELECT * FROM users WHERE user_name='$uname' AND password='$pass'";
+
+		$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) === 1) {
+			$row = mysqli_fetch_assoc($result);
+			if ($row['user_name'] === $uname && $row['password'] === $pass) {
+		
+			}else{
+				header("Location: index.php?error=Incorect User name or password");
+					exit();
+			}
+		}else{
+			
+		}
+	}
+
+}else{
+	header("Location: index.php");
+	exit(); 
+}
